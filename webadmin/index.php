@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>Web Admin</title>
 
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -45,12 +45,6 @@
             <li>
                 <a href="index.php?page=roles">Roles</a>
             </li>
-            <li>
-                <a href="index.php?page=posts">Posts</a>
-            </li>
-            <li>
-                <a href="index.php?page=comments">Comments</a>
-            </li>
         </ul>
 
         <ul class="list-unstyled CTAs">
@@ -82,19 +76,16 @@
 
             switch ($page) {
                 case 'users':
+                    echo "<script type='text/javascript' src='js/buttonHandlerUsers.js'></script>";
                     include "contents/users.php";
                     break;
                 case 'user_profiles':
+                    echo "<script type='text/javascript' src='js/buttonHandlerProfiles.js'></script>";
                     include "contents/userProfiles.php";
                     break;
                 case 'roles':
+                    echo "<script type='text/javascript' src='js/buttonHandlerRoles.js'></script>";
                     include "contents/roles.php";
-                    break;
-                case 'posts':
-                    include "contents/posts.php";
-                    break;
-                case 'comments':
-                    include "contents/comments.php";
                     break;
                 default:
                     echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
@@ -119,45 +110,26 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+<?php
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-            $(this).toggleClass('active');
-        });
-        $('#btnModal').on('click', function () {
-            $('#createModal').appendTo(".modal-show");
-            document.getElementById('modal-body').innerHTML = "<object id='modal-container' width='100%' height='200' data='contents/forms/users/createUserForm.php'> </object>";
-        })
-        var btnEdit = document.getElementsByClassName('btn-edit-user')
-        for (var i = 0; i < btnEdit.length; i++) {
-            btnEdit[i].onclick = function (){
-                $('#createModal').appendTo("body");
-                document.getElementById('modal-body').innerHTML = "<object id='modal-container' width='100%' height='200' data='contents/forms/users/updateUserForm.php?id=" + this.name + "'> </object>";
+    switch ($page) {
+        case 'users':
+            echo "<script type='text/javascript' src='js/buttonHandlerUsers.js'></script>";
+            break;
+        case 'user_profiles':
+            echo "<script type='text/javascript' src='js/buttonHandlerProfiles.js'></script>";
+            break;
+        case 'roles':
+            echo "<script type='text/javascript' src='js/buttonHandlerRoles.js'></script>";
+            break;
+    }
+} else {
+    include "contents/users.php";
+}
 
-            }
-        }
-        var btnDelete = document.getElementsByClassName('btn-delete-user')
-        for (var i = 0; i < btnDelete.length; i++) {
-            btnDelete[i].onclick = function (){
-                var answer = window.confirm("Delete Data ?")
-                if (answer){
-                    location.href = "handlers/users/userHandler.php?action=delete&id="+this.name+"";
-                }else{
-
-                }
-            }
-        }
-        var btnSearch = document.getElementsByClassName('btn-search-user')
-        for (var i = 0; i < btnSearch.length; i++) {
-            btnSearch[i].onclick = function (){
-                $param = document.getElementById('user-param').value
-                location.href = "index.php?page=users&parameter="+ $param;
-            }
-        }
-    });
-</script>
+?>
 </body>
 <div class="modal-show"></div>
 
