@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <link rel="icon" href="../assets/icon.jpg">
     <title>Web Admin</title>
 
     <!-- Bootstrap CSS CDN -->
@@ -28,6 +29,16 @@
 <body style="z-index: -1;">
 
 <div class="wrapper">
+    <!-- PHP Check Login Session -->
+    <?php
+    session_start();
+    if (isset($_SESSION['username']) && isset($_SESSION['user_id'])) {
+        $username = $_SESSION['username'];
+        $user_id = $_SESSION['user_id'];
+    }else {
+        echo "<script type='text/javascript'>window.location = 'login.php'; </script>";
+    }
+    ?>
     <!-- Sidebar Holder -->
     <nav id="sidebar">
         <div class="sidebar-header">
@@ -48,7 +59,7 @@
         </ul>
 
         <ul class="list-unstyled CTAs">
-
+            <p>User : <?php echo $username; ?></p>
         </ul>
     </nav>
 
@@ -59,9 +70,8 @@
             <div class="container-fluid">
 
                 <button type="button" id="sidebarCollapse" class="navbar-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <!--Logout Button Handler-->
+                    <span><button onclick="<?php session_destroy();?> window.location = 'login.php'" type="submit" id="logout" class="navbar-btn btn-danger"> Logout </button></span>
                 </button>
                 <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
