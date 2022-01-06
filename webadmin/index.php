@@ -36,7 +36,6 @@
         $username = $_SESSION['username'];
         $user_id = $_SESSION['user_id'];
     }else {
-        echo "<script type='text/javascript'>window.location = 'login.php'; </script>";
     }
     ?>
     <!-- Sidebar Holder -->

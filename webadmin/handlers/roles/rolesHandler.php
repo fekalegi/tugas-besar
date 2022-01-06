@@ -27,9 +27,9 @@ VALUES ('".$_POST['name']."','".$_POST['level']."')";
         }
         break;
     case 'delete':
-        echo "test";
+        
         $sql = "DELETE FROM roles WHERE roles.id = ". $_GET['id'] . "";
-        echo "TEST";
+        
         if ($conn->query($sql) === TRUE) {
             echo "<script type='text/javascript'>alert('data has been deleted');window.location = '../../index.php?page=roles';</script>";
 

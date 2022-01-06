@@ -42,7 +42,7 @@ VALUES ('" . $username . "','" . $_POST['title'] . "','" . $_POST['headerUrl'] .
         }
         break;
     case 'update':
-        echo "TEST";
+        
         $sql = "UPDATE posts SET author = '" . $username  . "', title = '" . $_POST['title'] . "'
         , header_image = '" . $_POST['last_name'] . "' , body = '" . $_POST['gender'] . "' , updated_date = '" . $_POST['email'] . "' 
         WHERE id = '" . $_POST['id'] . "'";
@@ -55,7 +55,7 @@ VALUES ('" . $username . "','" . $_POST['title'] . "','" . $_POST['headerUrl'] .
         }
         break;
     case 'delete':
-        echo "TEST";
+        
         $sql = "DELETE FROM posts WHERE id = ".$_POST['id']. "";
         echo $conn->error;
         if ($conn->query($sql) === TRUE) {

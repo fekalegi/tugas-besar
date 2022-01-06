@@ -18,7 +18,7 @@ VALUES ('".$_POST['user_id']."','".$_POST['avatarUrl']."','".$_POST['first_name'
         }
         break;
     case 'update':
-        echo "TEST";
+        
         $sql = "UPDATE user_profiles SET avatar = '".$_POST['avatarUrl']."',first_name = '".$_POST['first_name']."'
         , last_name = '".$_POST['last_name']."' , gender = '".$_POST['gender']."' , email = '".$_POST['email']."' 
         , phone_number = '".$_POST['phone_number']."' 
@@ -33,9 +33,9 @@ VALUES ('".$_POST['user_id']."','".$_POST['avatarUrl']."','".$_POST['first_name'
         }
         break;
     case 'delete':
-        echo "test";
+        
         $sql = "DELETE FROM user_profiles WHERE id = ". $_GET['id'] . "";
-        echo "TEST";
+        
         if ($conn->query($sql) === TRUE) {
             echo "<script type='text/javascript'>alert('data has been deleted');window.location = '../../index.php?page=user_profiles';</script>";
 

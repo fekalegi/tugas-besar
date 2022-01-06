@@ -1,6 +1,14 @@
 <?php
 session_start();
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', true);
 if (isset($_SESSION['username'])) {
+    if (isset($_SESSION['avatar'])){
+        $avatar = $_SESSION['avatar'];
+    }
+    else {
+        $avatar = "no-image.jpg";
+    }
     ?>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -44,7 +52,7 @@ if (isset($_SESSION['username'])) {
                                     id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                 <span class="sr-only">Open user menu</span>
                                 <img class="h-8 w-8 rounded-full"
-                                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                     src="../../webadmin/contents/forms/userProfiles/<?php echo $avatar ?>"
                                      alt="">
                             </button>
                         </a>

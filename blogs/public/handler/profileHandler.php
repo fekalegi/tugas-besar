@@ -13,6 +13,8 @@ switch ($action) {
 VALUES ('".$_POST['user_id']."','".$_POST['avatarUrl']."','".$_POST['first_name']."','".$_POST['last_name']."','".$_POST['gender']."',
 '".$_POST['email']."','".$_POST['phone_number']."')";
         if ($conn->query($sql) === TRUE) {
+            session_start();
+            $_SESSION['avatar'] = $_POST['avatarUrl'];
             echo "<script type='text/javascript'>window.location = '../account.php?action=success'</script>";
             exit;
         } else {
@@ -20,13 +22,15 @@ VALUES ('".$_POST['user_id']."','".$_POST['avatarUrl']."','".$_POST['first_name'
         }
         break;
     case 'update':
-        echo "TEST";
+        
         $sql = "UPDATE user_profiles SET avatar = '".$_POST['avatarUrl']."',first_name = '".$_POST['first_name']."'
         , last_name = '".$_POST['last_name']."' , gender = '".$_POST['gender']."' , email = '".$_POST['email']."' 
         , phone_number = '".$_POST['phone_number']."' 
         WHERE user_id = '".$_POST['user_id']."'";
         echo$conn->error;
         if ($conn->query($sql) === TRUE) {
+            session_start();
+            $_SESSION['avatar'] = $_POST['avatarUrl'];
             echo "<script type='text/javascript'>window.location = '../account.php?action=success'</script>";
 
             exit;
