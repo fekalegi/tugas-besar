@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_SESSION['username'])){
     ?>
     <section class="bg-black overflow-hidden"><nav class="relative z-10 flex px-16 justify-between bg-transparent border-b"><div class="pr-14 py-8 lg:border-r">
