@@ -1,0 +1,116 @@
+html(lang="en")
+    head
+        title Page title
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(name="description", content="")
+        meta(name="author", content="")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@400;500;600;700&display=swap")
+        link(rel="stylesheet", href="css/tailwind/tailwind.min.css")
+        link(rel="icon", type="image/png", sizes="16x16", href="favicon-tailwind.png")
+        script(src="js/main.js")
+    body(class="antialiased bg-body text-body font-body")
+        div(class="")
+            section(class="relative bg-black overflow-hidden")
+                nav(class="relative bg-transparent border-b")
+                    div(class="container mx-auto px-4")
+                        div(class="flex justify-between")
+                            div(class="pr-14 py-8 lg:flex items-center lg:border-r")
+                                a(class="inline-block text-xl text-white font-medium font-heading", href="#")
+                                    img(class="h-8", width="auto", src="boldui-assets/logo/logo-boldui-light.svg", alt="")
+                            button(class="navbar-burger lg:hidden self-center")
+                                svg(width="24", height="24", viewbox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                    rect(y="6", width="24", height="2", fill="white")
+                                    rect(y="11", width="24", height="2", fill="white")
+                                    rect(y="16", width="24", height="2", fill="white")
+                            div(class="hidden lg:block py-8 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-y-1/2 lg:-translate-x-1/2")
+                                ul(class="flex justify-center")
+                                    li(class="mr-12")
+                                        a(class="text-gray-500 hover:text-gray-400", href="#") Home
+                                    li(class="mr-12")
+                                        a(class="text-gray-500 hover:text-gray-400", href="#") Blogs
+                                    li(class="mr-12")
+                                        a(class="text-gray-500 hover:text-gray-400", href="#") About
+                                    li
+                                        a(class="text-gray-500 hover:text-gray-400", href="#") Testimonials
+                            div(class="hidden lg:flex items-center pl-16 border-l")
+                                div(class="flex items-center")
+                                    a(class="inline-block text-sm text-white hover:underline font-heading", href="#") Login
+                                    |                   
+                                    span(class="mx-2 text-white") /
+                                    |                   
+                                    a(class="inline-block text-sm text-white hover:underline font-heading", href="#") SignUp
+                div(class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50")
+                    div(class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25")
+                    nav(class="relative flex flex-col py-8 px-10 w-full h-full bg-black border-r overflow-y-auto")
+                        a(class="inline-block text-xl text-white font-medium font-heading mb-16 md:mb-32", href="#")
+                            img(class="h-8", width="auto", src="boldui-assets/logo/logo-boldui-light.svg", alt="")
+                        ul(class="mb-32")
+                            li(class="mb-10")
+                                a(class="flex items-center", href="#")
+                                    span(class="mr-3 text-lg text-white") Home
+                                    svg(width="16", height="9", viewbox="0 0 16 9", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M12.01 3.48047H0V5.57278H12.01V8.71124L16 4.52663L12.01 0.34201V3.48047Z", fill="#FFEC3E")
+                            li(class="mb-10")
+                                a(class="flex items-center", href="#")
+                                    span(class="mr-3 text-lg text-white") Blogs
+                                    svg(width="16", height="9", viewbox="0 0 16 9", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M12.01 3.48047H0V5.57278H12.01V8.71124L16 4.52663L12.01 0.34201V3.48047Z", fill="#FFEC3E")
+                            li(class="mb-10")
+                                a(class="flex items-center", href="#")
+                                    span(class="mr-3 text-lg text-white") About
+                                    svg(width="16", height="9", viewbox="0 0 16 9", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M12.01 3.48047H0V5.57278H12.01V8.71124L16 4.52663L12.01 0.34201V3.48047Z", fill="#FFEC3E")
+                            li
+                                a(class="flex items-center", href="#")
+                                    span(class="mr-3 text-lg text-white") Contact
+                                    svg(width="16", height="9", viewbox="0 0 16 9", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M12.01 3.48047H0V5.57278H12.01V8.71124L16 4.52663L12.01 0.34201V3.48047Z", fill="#FFEC3E")
+                        a(class="flex mb-8 items-center justify-center py-4 px-6 rounded-full bg-yellow-300 hover:bg-yellow-400 transform duration-200", href="#")
+                            svg(class="mr-3", width="16", height="9", viewbox="0 0 16 9", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                path(d="M12.01 3.16553H0V5.24886H12.01V8.37386L16 4.20719L12.01 0.0405273V3.16553Z", fill="black")
+                            span(class="text-sm font-medium uppercase tracking-wider") Sign Up
+                        |             
+                        a(class="flex mb-10 items-center text-white hover:underline", href="#")
+                            span(class="mr-2 text-sm") SignUp
+                            svg(width="16", height="10", viewbox="0 0 16 10", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                path(d="M12.01 3.95383H0V6.04614H12.01V9.1846L16 4.99998L12.01 0.815369V3.95383Z", fill="#FFEC3E")
+                        p(class="text-sm text-gray-500") All rights reserved © BoldUI 2021
+            section(class="relative py-32 bg-black bg-cover bg-no-repeat", style="background-image: url('boldui-assets/images/photo-women.png');")
+                div(class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80")
+                div(class="relative container mx-auto px-4")
+                    div(class="max-w-md")
+                        h2(class="mb-4 text-2xl text-white font-heading") Create account
+                        form(action="")
+                            input(class="w-full mb-4 py-4 px-6 bg-black rounded-full border text-white outline-none placeholder-white", type="email", placeholder="Type your e-mail")
+                            div(class="flex mb-6 py-4 px-6 bg-black rounded-full border text-white font-bold")
+                                input(class="w-full pr-4 bg-transparent outline-none placeholder-white", type="password", placeholder="Enter password")
+                                button
+                                    svg(width="28", height="20", viewbox="0 0 28 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                        path(fill-rule="evenodd", clip-rule="evenodd", d="M0.292897 9.29285C-0.0976325 9.68335 -0.0976325 10.3166 0.292897 10.7071L4.7868 15.201C9.86357 20.2778 18.0948 20.2778 23.1716 15.201L27.6655 10.7071C28.056 10.3166 28.056 9.68335 27.6655 9.29285L23.1716 4.79895C18.0948 -0.277868 9.86357 -0.277878 4.7868 4.79895L0.292897 9.29285ZM6.20101 13.7868L2.41422 9.99995L6.20102 6.21315C10.4968 1.91739 17.4616 1.91739 21.7574 6.21315L25.5442 9.99995L21.7574 13.7868C17.4616 18.0826 10.4968 18.0826 6.20101 13.7868ZM10.9584 9.99995C10.9584 8.34305 12.3015 6.99995 13.9584 6.99995C15.6153 6.99995 16.9584 8.34305 16.9584 9.99995C16.9584 11.6569 15.6153 13 13.9584 13C12.3015 13 10.9584 11.6569 10.9584 9.99995ZM13.9584 4.99995C11.197 4.99995 8.95837 7.23855 8.95837 9.99995C8.95837 12.7614 11.197 15 13.9584 15C16.7198 15 18.9584 12.7614 18.9584 9.99995C18.9584 7.23855 16.7198 4.99995 13.9584 4.99995Z", fill="#FFEC3E")
+                            a(class="inline-flex items-center justify-center py-4 px-6 rounded-full bg-yellow-300 hover:bg-yellow-400 transform duration-200", href="#")
+                                svg(class="mr-3", width="16", height="9", viewbox="0 0 16 9", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                span(class="text-sm font-medium font-heading") Sign Up
+            section(class="bg-black overflow-x-hidden")
+                div(class="py-20 border-t")
+                    div(class="container mx-auto px-4")
+                        div(class="flex flex-wrap justify-between")
+                            a(class="inline-block text-xl text-white font-medium font-heading mb-8 md:mb-0", href="#")
+                                img(class="h-8", src="boldui-assets/logo/logo-boldui-light.svg", alt="", width="auto")
+                            p(class="mb-8 md:mb-0 text-gray-500") All rights reserved © BoldUI 2021
+                            div(class="w-full md:w-auto")
+                                div(class="flex flex-wrap")
+                                    a(class="mr-8", href="#")
+                                        img(src="boldui-assets/brands/small-logos/facebook.svg", alt="")
+                                    |                   
+                                    a(class="mr-8", href="#")
+                                        img(src="boldui-assets/brands/small-logos/twitter.svg", alt="")
+                                    |                   
+                                    a(class="mr-8", href="#")
+                                        img(src="boldui-assets/brands/small-logos/instagram.svg", alt="")
+                                    |                   
+                                    a(class="mr-8", href="#")
+                                        img(src="boldui-assets/brands/small-logos/github.svg", alt="")
+                                    |                   
+                                    a(href="#")
+                                        img(src="boldui-assets/brands/small-logos/linkedin.svg", alt="")

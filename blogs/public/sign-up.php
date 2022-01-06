@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icon.jpg">
     <script src="js/main.js"></script>
   </head>
   <body class="antialiased bg-body text-body font-body">

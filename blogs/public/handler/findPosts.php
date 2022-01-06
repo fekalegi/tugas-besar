@@ -33,7 +33,6 @@ class Posts {
             }
             return json_encode($this->arr);
         } else {
-            echo "0 results";
         }
     }
 
@@ -46,7 +45,6 @@ class Posts {
         if ($result->num_rows > 0) {
             return json_encode($result->fetch_assoc());
         } else {
-            echo "0 results";
         }
     }
 }

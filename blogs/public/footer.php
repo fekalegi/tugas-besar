@@ -8,19 +8,19 @@
                 <p class="mb-8 md:mb-0 text-gray-500">Feka Legi Heryana Rizky - 4110201179</p>
                 <div class="w-full md:w-auto">
                     <div class="flex flex-wrap">
-                        <a class="mr-8" href="#">
+                        <a class="mr-8" href="https://www.facebook.com/fekalegi/" target="_blank" rel="noopener noreferrer">
                             <img src="boldui-assets/brands/small-logos/facebook.svg" alt="">
                         </a>
-                        <a class="mr-8" href="#">
+                        <a class="mr-8" href="https://twitter.com/fekalegi" target="_blank" rel="noopener noreferrer">
                             <img src="boldui-assets/brands/small-logos/twitter.svg" alt="">
                         </a>
-                        <a class="mr-8" href="#">
+                        <a class="mr-8" href="https://www.instagram.com/fekalegi/" target="_blank" rel="noopener noreferrer">
                             <img src="boldui-assets/brands/small-logos/instagram.svg" alt="">
                         </a>
-                        <a class="mr-8" href="#">
+                        <a class="mr-8" href="https://github.com/fekalegi" target="_blank" rel="noopener noreferrer">
                             <img src="boldui-assets/brands/small-logos/github.svg" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/feka-legi-heryana-rizki-526163122/" target="_blank" rel="noopener noreferrer">
                             <img src="boldui-assets/brands/small-logos/linkedin.svg" alt="">
                         </a>
                     </div>

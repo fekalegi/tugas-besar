@@ -9,10 +9,10 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icon.jpg">
+
     <script src="https://cdn.tiny.cloud/1/e2gflvcjajvi6196u0r32tpapwgvz6s71delm5i7f9novuhs/tinymce/5/tinymce.min.js"
             referrerpolicy="origin"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         function upload(val) {
@@ -54,8 +54,10 @@
 
                     <form action="handler/postHandler.php?action=create" method="post" id="post">
                         <div class="mb-3">
-                            <input required name="title" class="w-full mb-4 py-4 px-6 bg-black rounded-full border text-white outline-none placeholder-white" type="text" placeholder="Your Title Here">
-                            </div>
+                            <input required name="title"
+                                   class="w-full mb-4 py-4 px-6 bg-black rounded-full border text-white outline-none placeholder-white"
+                                   type="text" placeholder="Your Title Here">
+                        </div>
                         <input type="hidden" name="headerUrl" id="headerUrl">
                         <div class="mb-3" id="headerImage">
                             <img src="../../assets/no-image.jpg" alt="..." class="img-thumbnail">
@@ -93,60 +95,15 @@
 
     tinymce.init({
         selector: 'textarea#file-picker',
-        plugins: 'image code print preview powerpaste casechange importcss tinydrive searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists checklist wordcount tinymcespellchecker a11ychecker imagetools textpattern noneditable help formatpainter permanentpen pageembed charmap mentions quickbars linkchecker emoticons advtable export',
+        plugins: 'code print preview powerpaste casechange importcss tinydrive searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists checklist wordcount tinymcespellchecker a11ychecker imagetools textpattern noneditable help formatpainter permanentpen pageembed charmap mentions quickbars linkchecker emoticons advtable export',
         min_height: 500,
-        toolbar: 'undo redo | link image | code | undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment',
-        /* enable title field in the Image dialog*/
-        image_title: true,
-        /* enable automatic uploads of images represented by blob or data URIs*/
-        automatic_uploads: true,
-        /*
-          URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
-          images_upload_url: 'postAcceptor.php',
-          here we add custom filepicker only to Image dialog
-        */
-        file_picker_types: 'image',
-        /* and here's our custom image picker*/
-        file_picker_callback: function (cb, value, meta) {
-            var input = document.createElement('input');
-            input.setAttribute('type', 'file');
-            input.setAttribute('accept', 'image/*');
-
-            /*
-              Note: In modern browsers input[type="file"] is functional without
-              even adding it to the DOM, but that might not be the case in some older
-              or quirky browsers like IE, so you might want to add it to the DOM
-              just in case, and visually hide it. And do not forget do remove it
-              once you do not need it anymore.
-            */
-
-            input.onchange = function () {
-                var file = this.files[0];
-
-                var reader = new FileReader();
-                reader.onload = function () {
-                    /*
-                      Note: Now we need to register the blob in TinyMCEs image blob
-                      registry. In the next release this part hopefully won't be
-                      necessary, as we are looking to handle it internally.
-                    */
-                    var id = 'blobid' + (new Date()).getTime();
-                    var blobCache = tinymce.activeEditor.editorUpload.blobCache;
-                    var base64 = reader.result.split(',')[1];
-                    var blobInfo = blobCache.create(id, file, base64);
-                    blobCache.add(blobInfo);
-
-                    /* call the callback and populate the Title field with the file name */
-                    cb(blobInfo.blobUri(), {title: file.name});
-                };
-                reader.readAsDataURL(file);
-            };
-            input.click();
-        },
+        toolbar: 'undo redo | code | undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment',
         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
     });
 
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </body>
 </html>
 
