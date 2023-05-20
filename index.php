@@ -1,3 +1,3 @@
 <?php
-echo "<script>window.location = 'blogs/public/index.php'</script>"
+echo "<script>window.location = 'blogs/public/index.php'</script>" 
 ?>
